@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff");
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC');
+
+html,
+body {
+  height: 100%;
+  margin: 0px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.countdown {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}

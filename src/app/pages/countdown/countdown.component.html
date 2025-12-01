@@ -16,3 +16,10 @@
     <span class="text">{{ _counter.cnt.seconds === 1 ? 'segundo' : 'segundos' }}</span>
   </div>
 </div>
+
+<div *ngIf="isDev" style="position: fixed; bottom: 10px; right: 10px; z-index: 1000;">
+  <button (click)="toggleTest()"
+    style="padding: 10px; background: red; color: white; border: none; border-radius: 5px; cursor: pointer; opacity: 0.7;">
+    TEST: Finish Timer
+  </button>
+</div>

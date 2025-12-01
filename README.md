@@ -1,27 +1,74 @@
 # Nia2025
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.16.
+Este proyecto es una aplicación web construida con [Angular](https://github.com/angular/angular) versión 16. Utiliza Firebase para el backend y hosting, y Bootstrap para el diseño de la interfaz.
 
-## Development server
+## 🚀 Características Principales
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+*   **Frontend Framework:** Angular 16
+*   **UI Framework:** Bootstrap 5
+*   **Backend & Hosting:** Firebase (Hosting, Authentication, Firestore)
+*   **Efectos Visuales:** @fireworks-js/angular
 
-## Code scaffolding
+## 📋 Requisitos Previos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Asegúrate de tener instalado lo siguiente:
 
-## Build
+*   [Node.js](https://nodejs.org/)
+*   [Angular CLI](https://github.com/angular/angular-cli): `npm install -g @angular/cli`
+*   [Firebase CLI](https://github.com/firebase/firebase-tools): `npm install -g firebase-tools`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Instalación
 
-## Running unit tests
+1.  Clona el repositorio (si aún no lo has hecho):
+    ```bash
+    git clone https://github.com/ediervillaneda/Nia2025.git
+    ```
+2.  Instala las dependencias del proyecto:
+    ```bash
+    npm install
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 💻 Servidor de Desarrollo
 
-## Running end-to-end tests
+Ejecuta el siguiente comando para iniciar el servidor de desarrollo:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias algún archivo fuente.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📦 Construcción (Build)
+
+Para construir el proyecto para producción, ejecuta:
+
+```bash
+ng build
+```
+
+Los artefactos de construcción se almacenarán en el directorio `dist/Nia2025`.
+
+## ☁️ Despliegue en Firebase
+
+Este proyecto está configurado para desplegarse en Firebase Hosting.
+
+1.  Inicia sesión en Firebase (si no lo has hecho):
+    ```bash
+    firebase login
+    ```
+2.  Construye el proyecto:
+    ```bash
+    ng build
+    ```
+3.  Despliega en Firebase:
+    ```bash
+    firebase deploy
+    ```
+
+## 📁 Estructura del Proyecto
+
+*   `src/app`: Contiene el código fuente de la aplicación (componentes, servicios, módulos).
+*   `src/assets`: Recursos estáticos como imágenes e iconos.
+*   `src/environments`: Archivos de configuración de entorno (Firebase config, etc.).
+*   `angular.json`: Configuración del CLI de Angular.
+*   `firebase.json`: Configuración de despliegue de Firebase.
