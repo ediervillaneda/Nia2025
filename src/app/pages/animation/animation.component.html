@@ -34,4 +34,4 @@
   </div>
 </div>
 
-<ng-fireworks #fireworks="ngFireworks" [options]="options" class="fireworks"></ng-fireworks>
+<ng-fireworks *ngIf="isBrowser" #fireworks="ngFireworks" [options]="options" class="fireworks"></ng-fireworks>

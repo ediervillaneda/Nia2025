@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AnimationComponent } from './animation.component';
+import { NgFireworksModule } from '@fireworks-js/angular';
 
 describe('AnimationComponent', () => {
   let component: AnimationComponent;
@@ -8,7 +8,7 @@ describe('AnimationComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AnimationComponent]
+      imports: [AnimationComponent, NgFireworksModule]
     });
     fixture = TestBed.createComponent(AnimationComponent);
     component = fixture.componentInstance;

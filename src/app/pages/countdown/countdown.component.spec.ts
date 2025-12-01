@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CountdownComponent } from './countdown.component';
+import { CounterService } from '../../services/counter.service';
 
 describe('CountdownComponent', () => {
   let component: CountdownComponent;
@@ -8,7 +8,8 @@ describe('CountdownComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CountdownComponent]
+      imports: [CountdownComponent],
+      providers: [CounterService]
     });
     fixture = TestBed.createComponent(CountdownComponent);
     component = fixture.componentInstance;

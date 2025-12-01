@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 
 import { Counter } from '../interfaces/counter.interface';
 
@@ -6,11 +6,13 @@ import { Counter } from '../interfaces/counter.interface';
   providedIn: 'root',
 })
 export class CounterService {
-  private readonly birthDay = new Date(2025, 3, 7, 0, 0).getTime();
+  private readonly birthDay = new Date(2025, 12, 12, 0, 0).getTime();
   private readonly MS_IN_SECOND = 1000;
   private readonly MS_IN_MINUTE = this.MS_IN_SECOND * 60;
   private readonly MS_IN_HOUR = this.MS_IN_MINUTE * 60;
   private readonly MS_IN_DAY = this.MS_IN_HOUR * 24;
+
+  private testFinished = false;
 
   cnt: Counter = {
     days: 0,
@@ -24,9 +26,21 @@ export class CounterService {
     this.countdown();
   }
 
+  toggleTestFinish() {
+    if (isDevMode()) {
+      this.testFinished = !this.testFinished;
+      this.countdown();
+    }
+  }
+
   countdown() {
     // get today's date
-    const now = new Date().getTime();
+    let now = new Date().getTime();
+
+    if (isDevMode() && this.testFinished) {
+      now = this.birthDay + 1000;
+    }
+
     const diff = this.birthDay - now;
 
     this.cnt.days = Math.floor(diff / this.MS_IN_DAY);
@@ -36,6 +50,15 @@ export class CounterService {
 
     if (diff >= 0) {
       this.cnt.status = 0;
+    } else {
+      // Optional: Handle expired state if not already handled
+      // For now, we just let the negative values show or let the user handle it
+      // But usually we want to stop at 0
+      this.cnt.days = 0;
+      this.cnt.hours = 0;
+      this.cnt.minutes = 0;
+      this.cnt.seconds = 0;
+      this.cnt.status = 1; // Assuming 1 is finished/celebration
     }
   }
 }

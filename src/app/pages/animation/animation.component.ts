@@ -1,15 +1,17 @@
-import { Component, ViewChild } from '@angular/core';
-import type {
-  FireworksDirective,
-  FireworksOptions,
-} from '@fireworks-js/angular';
+import { Component, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { NgFireworksModule } from '@fireworks-js/angular';
+import type { FireworksOptions, FireworksDirective } from '@fireworks-js/angular';
 
 @Component({
   selector: 'app-animation',
+  standalone: true,
+  imports: [CommonModule, NgFireworksModule],
   templateUrl: './animation.component.html',
   styleUrls: ['./animation.component.scss'],
 })
 export class AnimationComponent {
+  isBrowser: boolean;
   enabled = true;
   candles = Array(30).fill(0);
   options: FireworksOptions = {
@@ -45,4 +47,8 @@ export class AnimationComponent {
   };
 
   @ViewChild('fireworks') fireworks?: FireworksDirective;
+
+  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 }
