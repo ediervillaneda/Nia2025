@@ -1,0 +1,37 @@
+<div class="container-fluid bg-secondary">
+  <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="row">
+      <div class="col">
+        <span class="titulo">¡Feliz Cumpleaños NIA!</span>
+      </div>
+    </div>
+    <div class="row">
+      <span class="torta">
+        <div class="col" style="height: 300px">
+          <div class="tortica">
+            <div *ngFor="let candle of candles" class="candle">
+              <div id="flame" class="lit"></div>
+            </div>
+            <div class="cake"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="row">
+      <div class="col">
+        <span class="texto">
+          <p>
+            ¡Feliz cumpleaños, hermosa persona!<br />
+            Hoy el mundo brilla un poco más porque es tu día, pero tengo que
+            admitir que tu sonrisa ya lo ilumina siempre. <br />
+            Que este año te traiga todo lo que deseas… Aunque ya te esta
+            sorprendiendo bastante.
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-fireworks #fireworks="ngFireworks" [options]="options" class="fireworks"></ng-fireworks>

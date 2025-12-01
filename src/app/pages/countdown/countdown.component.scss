@@ -1,0 +1,77 @@
+.timer {
+  font-family: "Covered By Your Grace", cursive;
+  line-height: 1;
+  padding: 20px;
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  div {
+    margin: 0 15px;
+    min-width: 100px;
+
+    span {
+      color: white;
+      display: block;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-height: 650px) and (max-width: 680px) {
+  .timer {
+    div span {
+      font-size: 4vh;
+    }
+
+    .days {
+      font-size: 25vh;
+    }
+
+    .hours {
+      font-size: 20vh;
+    }
+
+    .minutes {
+      font-size: 15vh;
+    }
+
+    .seconds {
+      font-size: 10vh;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .timer {
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 768px), (orientation: landscape) {
+  .timer {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.days {
+  color: #db4844;
+  font-size: 200px;
+}
+
+.hours {
+  color: #f07c22;
+  font-size: 150px;
+}
+
+.minutes {
+  color: #f6da74;
+  font-size: 100px;
+}
+
+.seconds {
+  color: #abcd58;
+  font-size: 50px;
+}
