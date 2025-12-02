@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy": "firebase deploy",
     "serve:ssr:Nia2025": "node dist/nia2025/server/server.mjs"
   },
   "private": true,

@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/nia2025",
+    "public": "dist/nia2025/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -6,7 +6,7 @@ import { Counter } from '../interfaces/counter.interface';
   providedIn: 'root',
 })
 export class CounterService {
-  private readonly birthDay = new Date(2025, 12, 12, 0, 0).getTime();
+  private readonly birthDay = new Date(2025, 11, 12, 0, 0).getTime();
   private readonly MS_IN_SECOND = 1000;
   private readonly MS_IN_MINUTE = this.MS_IN_SECOND * 60;
   private readonly MS_IN_HOUR = this.MS_IN_MINUTE * 60;
