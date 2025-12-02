@@ -12,8 +12,6 @@ import { CountdownComponent } from './pages/countdown/countdown.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Nia2025';
-
   constructor(public _counter: CounterService) {
     this._counter.countdown();
   }
