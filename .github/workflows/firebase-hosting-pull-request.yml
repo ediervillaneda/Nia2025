@@ -19,3 +19,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NIA2025_E5312 }}
           projectId: nia2025-e5312
+          channelId: live
