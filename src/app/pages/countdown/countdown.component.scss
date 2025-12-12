@@ -1,3 +1,10 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .timer {
   font-family: "Covered By Your Grace", cursive;
   line-height: 1;
@@ -49,7 +56,8 @@
   }
 }
 
-@media (min-width: 768px), (orientation: landscape) {
+@media (min-width: 768px),
+(orientation: landscape) {
   .timer {
     align-items: flex-start;
     flex-direction: row;
