@@ -1,13 +1,13 @@
 <div class="timer">
-  <div class="days">
+  <div class="days" *ngIf="_counter.cnt.days > 0">
     {{ _counter.cnt.days }}
     <span class="text">{{ _counter.cnt.days === 1 ? 'dia' : 'dias' }}</span>
   </div>
-  <div class="hours">
+  <div class="hours" *ngIf="_counter.cnt.hours > 0 || _counter.cnt.days > 0">
     {{ _counter.cnt.hours }}
     <span class="text">{{ _counter.cnt.hours === 1 ? 'hora' : 'horas' }}</span>
   </div>
-  <div class="minutes">
+  <div class="minutes" *ngIf="_counter.cnt.minutes > 0 || _counter.cnt.hours > 0 || _counter.cnt.days > 0">
     {{ _counter.cnt.minutes }}
     <span class="text">{{ _counter.cnt.minutes === 1 ? 'minuto' : 'minutos' }}</span>
   </div>

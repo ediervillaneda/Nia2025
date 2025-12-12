@@ -236,7 +236,7 @@ export class ShapeShifterComponent implements OnInit, OnDestroy {
         default:
           this.switchShape(this.letter(current[0] === this.cmd ? 'What?' : current));
       }
-    }, 2000, this.sequence.length);
+    }, 3000, this.sequence.length);
   }
 
   /**
@@ -445,7 +445,10 @@ export class ShapeShifterComponent implements OnInit, OnDestroy {
 
     while (n.dots.length > 0) {
       i = Math.floor(Math.random() * n.dots.length);
-      this.dots[d].e = fast ? 0.25 : (this.dots[d].s ? 0.14 : 0.11);
+      // Clear any pending movements from previous shapes to prevent backlog
+      this.dots[d].q = [];
+      // Increase speed: fast ? 0.35 : (s ? 0.20 : 0.16)
+      this.dots[d].e = fast ? 0.35 : (this.dots[d].s ? 0.20 : 0.16);
 
       if (this.dots[d].s) {
         this.dots[d].move(new Point({
